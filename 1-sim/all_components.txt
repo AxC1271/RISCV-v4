@@ -1,0 +1,4 @@
+../0-rtl/alu.sv 
+../0-rtl/arch_rf.sv
+../0-rtl/bimodal_predictor.sv
+../0-rtl/branch_unit.sv
