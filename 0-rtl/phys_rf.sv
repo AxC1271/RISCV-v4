@@ -2,7 +2,6 @@ module phys_rf
     import core_types_pkg::*;    
 (
     input  logic clk,
-    input  logic rst_n,
 
     input  phys_tag_t raddr0,
     output data_t rdata0,
@@ -32,6 +31,21 @@ module phys_rf
     */
 
     data_t regs[PHYS_REGS];
+
+    // read data
+    assign rdata0 = regs[raddr0];
+    assign rdata1 = regs[raddr1];
+    assign rdata2 = regs[raddr2];
+    assign rdata3 = regs[raddr3];
+
+    // handle writes here
+    always_ff @(posedge clk) begin
+        if (we0 && (waddr0 != '0))
+            regs[waddr0] <= wdata0;
+    
+        if (we1 && (waddr1 != '0))
+            regs[waddr1] <= wdata1;
+    end
 
     /*
     1. My formal properties live here
