@@ -1,5 +1,0 @@
-module rat (
-
-);
-
-endmodule
