@@ -24,12 +24,6 @@ module phys_rf
     input data_t wdata1
 );
 
-    /*
-    1. All of my RTL logic lives here
-    2. All combinational/registered logic are defined here
-    3. Use these during testbenches/simulations 
-    */
-
     data_t regs[PHYS_REGS];
 
     // read data
@@ -46,11 +40,5 @@ module phys_rf
         if (we1 && (waddr1 != '0))
             regs[waddr1] <= wdata1;
     end
-
-    /*
-    1. My formal properties live here
-    2. All asserts, assumes, and covers are defined here
-    3. Use these during SymbiYosys for formal verification
-    */
 
 endmodule
