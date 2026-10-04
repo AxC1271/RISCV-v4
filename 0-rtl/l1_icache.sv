@@ -6,10 +6,10 @@
 // the remaining 21 bits are the tags
 
 module l1_icache # (
-    parameter ADDR_BITS      = 32,
     parameter NUM_SETS       = 64,
-    parameter NUM_WAYS       = 2,
-    parameter WORDS_PER_LINE = 8
+    parameter ADDR_BITS      = 32,
+    parameter WORDS_PER_LINE = 8,
+    parameter NUM_WAYS       = 2
 ) (
     input  logic clk,
     input  logic rst_n,
