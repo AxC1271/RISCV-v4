@@ -2,8 +2,8 @@
 
 module core_riscv_tb();
     localparam CLK_PERIOD  = 10;
-    localparam IMEM_WORDS  = 1024;   // 4 kB instruction ROM
-    localparam DMEM_WORDS  = 16384;  // 64 kB data memory
+    localparam IMEM_WORDS  = 1024;          // 4 kB instruction ROM
+    localparam DMEM_WORDS  = 16384;         // 64 kB data memory
     localparam BASE        = 32'h0000_0000; // reset vector / .text base
 
     logic clk;
